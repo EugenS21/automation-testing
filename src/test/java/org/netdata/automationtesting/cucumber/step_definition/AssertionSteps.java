@@ -5,6 +5,9 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
+import org.netdata.automationtesting.client.modals.alarms_modal.AlarmsModal;
+import org.netdata.automationtesting.client.modals.alarms_modal.body.AlarmsTable;
+import org.netdata.automationtesting.client.modals.alarms_modal.body.Tab;
 import org.netdata.automationtesting.client.pages.home_page.HomePage;
 import org.netdata.automationtesting.cucumber.assertion.SoftAssert;
 import org.netdata.automationtesting.cucumber.context.ScenarioContext;
@@ -12,9 +15,10 @@ import org.netdata.automationtesting.rest.dto.AlarmDto;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 
-import static org.netdata.automationtesting.cucumber.context.StorageKey.ALARMS_COUNT;
-import static org.netdata.automationtesting.cucumber.context.StorageKey.ALARMS_REST;
+import static java.util.List.of;
+import static org.netdata.automationtesting.cucumber.context.StorageKey.*;
 
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -47,5 +51,23 @@ public class AssertionSteps {
         softAssertions.assertThat(homePage.getTitle())
                 .describedAs("Unexpecting page title")
                 .contains("netdata dashboard");
+    }
+
+    @Then("expecting a modal with title '{}'")
+    public void expectingAModalWithTitle(String title) {
+        AlarmsModal alarmsModal = scenarioContext.getFromStorage(MODAL, AlarmsModal.class);
+        softAssertions.assertThat(alarmsModal.getTitle())
+                .describedAs("Unexpected modal details")
+                .isEqualTo(title);
+    }
+
+    @Then("expecting only alarms with clear status")
+    public void expectingNoActiveRaisedAlarms() {
+        Tab activeTab = scenarioContext.getFromStorage(ACTIVE_TAB, Tab.class);
+        AlarmsTable alarmsTable = activeTab.getBody(AlarmsTable.class);
+        softAssertions.assertThat(alarmsTable.getTableBody())
+                .describedAs("Unexpected status of alarms")
+                .extracting(el -> el.get("Status"))
+                .returns(of("CLEAR"), list -> list.stream().distinct().collect(Collectors.toList()));
     }
 }
