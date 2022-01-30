@@ -1,4 +1,4 @@
-package org.netdata.automationtesting.client.elements;
+package org.netdata.automationtesting.ui.elements;
 
 import java.util.List;
 import java.util.Map;

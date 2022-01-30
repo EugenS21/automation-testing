@@ -1,10 +1,10 @@
-package org.netdata.automationtesting.client.pages.home_page;
+package org.netdata.automationtesting.ui.pages.home_page;
 
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.netdata.automationtesting.client.pages.IPage;
+import org.netdata.automationtesting.ui.pages.IPage;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

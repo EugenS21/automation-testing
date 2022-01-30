@@ -1,8 +1,8 @@
-package org.netdata.automationtesting.client.modals.alarms_modal.body;
+package org.netdata.automationtesting.ui.modals.alarms_modal.body;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
-import org.netdata.automationtesting.client.elements.ITable;
+import org.netdata.automationtesting.ui.elements.ITable;
 import org.netdata.automationtesting.util.Utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

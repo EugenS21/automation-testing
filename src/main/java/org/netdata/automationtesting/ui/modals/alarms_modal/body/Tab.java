@@ -1,10 +1,10 @@
-package org.netdata.automationtesting.client.modals.alarms_modal.body;
+package org.netdata.automationtesting.ui.modals.alarms_modal.body;
 
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
-import org.netdata.automationtesting.client.elements.ITab;
+import org.netdata.automationtesting.ui.elements.ITab;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
