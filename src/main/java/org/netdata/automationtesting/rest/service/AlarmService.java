@@ -3,6 +3,7 @@ package org.netdata.automationtesting.rest.service;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.netdata.automationtesting.rest.dto.AlarmDto;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -12,9 +13,12 @@ public class AlarmService {
 
     WebClient webClient;
 
-    public AlarmService(WebClient webClient) {
+    public AlarmService(
+            @Value("${base.url}") String baseUrl,
+            WebClient webClient
+    ) {
         this.webClient = webClient.mutate()
-                .baseUrl("http://localhost:19999/api/v1/".concat("alarms"))
+                .baseUrl(baseUrl.concat("alarms"))
                 .build();
     }
 
