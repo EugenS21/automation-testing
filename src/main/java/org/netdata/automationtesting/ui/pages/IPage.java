@@ -1,4 +1,4 @@
-package org.netdata.automationtesting.client.pages;
+package org.netdata.automationtesting.ui.pages;
 
 public interface IPage {
 

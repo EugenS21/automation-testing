@@ -1,4 +1,4 @@
-package org.netdata.automationtesting.client.driver;
+package org.netdata.automationtesting.ui.driver;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;

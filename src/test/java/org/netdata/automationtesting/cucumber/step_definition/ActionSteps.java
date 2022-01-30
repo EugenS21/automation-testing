@@ -6,13 +6,13 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
-import org.netdata.automationtesting.client.modals.alarms_modal.AlarmsModal;
-import org.netdata.automationtesting.client.modals.alarms_modal.body.AlarmsModalBody;
-import org.netdata.automationtesting.client.modals.alarms_modal.body.Tab;
-import org.netdata.automationtesting.client.pages.home_page.HomePage;
 import org.netdata.automationtesting.cucumber.context.ScenarioContext;
 import org.netdata.automationtesting.rest.dto.AlarmDto;
 import org.netdata.automationtesting.rest.service.AlarmService;
+import org.netdata.automationtesting.ui.modals.alarms_modal.AlarmsModal;
+import org.netdata.automationtesting.ui.modals.alarms_modal.body.AlarmsModalBody;
+import org.netdata.automationtesting.ui.modals.alarms_modal.body.Tab;
+import org.netdata.automationtesting.ui.pages.home_page.HomePage;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.netdata.automationtesting.cucumber.context.StorageKey.*;

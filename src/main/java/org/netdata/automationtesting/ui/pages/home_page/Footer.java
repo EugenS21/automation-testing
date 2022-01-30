@@ -1,4 +1,4 @@
-package org.netdata.automationtesting.client.pages.home_page;
+package org.netdata.automationtesting.ui.pages.home_page;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package org.netdata.automationtesting.client.modals.alarms_modal.body;
+package org.netdata.automationtesting.ui.modals.alarms_modal.body;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

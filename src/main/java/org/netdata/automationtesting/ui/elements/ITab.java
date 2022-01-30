@@ -1,4 +1,4 @@
-package org.netdata.automationtesting.client.elements;
+package org.netdata.automationtesting.ui.elements;
 
 public interface ITab {
 

@@ -1,12 +1,12 @@
-package org.netdata.automationtesting.client.modals.alarms_modal;
+package org.netdata.automationtesting.ui.modals.alarms_modal;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.NonFinal;
-import org.netdata.automationtesting.client.elements.IModal;
-import org.netdata.automationtesting.client.modals.alarms_modal.body.AlarmsModalBody;
-import org.netdata.automationtesting.client.pages.IPage;
+import org.netdata.automationtesting.ui.elements.IModal;
+import org.netdata.automationtesting.ui.modals.alarms_modal.body.AlarmsModalBody;
+import org.netdata.automationtesting.ui.pages.IPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

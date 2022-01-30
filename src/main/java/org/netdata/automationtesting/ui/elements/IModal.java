@@ -1,6 +1,6 @@
-package org.netdata.automationtesting.client.elements;
+package org.netdata.automationtesting.ui.elements;
 
-import org.netdata.automationtesting.client.pages.IPage;
+import org.netdata.automationtesting.ui.pages.IPage;
 
 public interface IModal {
 
