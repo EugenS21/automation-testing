@@ -1,13 +1,8 @@
 package org.netdata.automationtesting;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
-public class FrameworkForAutomationTestingApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(FrameworkForAutomationTestingApplication.class, args);
-	}
-
-}
+@Configuration
+@ComponentScan
+public class FrameworkForAutomationTestingApplication {}
