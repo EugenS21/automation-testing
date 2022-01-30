@@ -1,6 +1,6 @@
 # Netdata automation framework solution
 
-Automation framework is execution test cases in gherkin format for both ui and api sides.
+Automation framework is running test cases in gherkin format for both ui and api sides.
 
 ##Used Tools:
 * java >= 11
